@@ -1,0 +1,3 @@
+## Neste exemplo, a classe UsuarioDoMonitor representa as threads que simulam os usuários do monitor de computador. Cada usuário tenta adquirir a permissão para utilizar o monitor usando semaforo.acquire(). Se a permissão estiver disponível, o usuário entra na seção crítica, representa o uso do monitor (simulado com Thread.sleep(2000) neste caso) e, em seguida, libera o monitor com semaforo.release().
+
+> O semáforo semaforo com valor inicial 1 garante que apenas um usuário por vez pode utilizar o monitor. As outras threads que tentam adquirir a permissão terão que esperar até que o monitor seja liberado pela thread em execução.
